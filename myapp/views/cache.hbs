@@ -1,0 +1,18 @@
+<div class="container">
+    <h3>Welcome to cache!</h3>
+    <button type="button" class="btn btn-success">Show Cache</button>
+    <button type="button" class="btn btn-danger">Clear Cache</button>
+</div>
+<div class="container" id="place_holder">
+</div>
+<script id="my_template_cache" type="text/x-handlebars-template">
+    \{{#cache}}
+    <li class="list-group-item">
+        \{{found}}
+    </li>
+    \{{/cache}}
+</script>
+
+{{#extend "scripts"}}
+    <script type="text/javascript" src="/js/cache.js"></script>
+{{/extend}}

@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Hello World!</h1>
+    <input type="text" id="searchInput" name="example" placeholder="ex. Narnia...">
+</div>
+<div class="container" id="container">
+    <h3 class="results">Your total results will show here!</h3>
+    <ul class="movie_details list-group">
+    </ul>
+</div>
+<!--This is our template. -->
+<!--Data will be inserted in its according place, replacing the brackets.-->
+<script id="my_template" type="text/x-handlebars-template">
+    \{{#Search}}
+    <li class="list-group-item">
+        \{{Title}} \{{Year}} \{{Type}} \{{#if Poster}}
+        <img src=" \{{Poster}} " class="img-rounded" height="100" /> \{{/if}}
+    </li>
+    \{{/Search}}
+</script>
+
+{{#extend "scripts"}}
+    <script type="text/javascript" src="/js/index.js"></script>
+{{/extend}}
